@@ -14,7 +14,7 @@ public class TextComponent extends AbstractTextComponent{
     @Override
     public String operation() {
         StringBuilder sb = new StringBuilder();
-        componentList.forEach(sb::append);
+        componentList.forEach(c -> sb.append(c.operation()).append(c.componentType.getDelimiter()));
         return sb.toString();
     }
 
